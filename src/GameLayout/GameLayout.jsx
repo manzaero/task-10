@@ -13,12 +13,12 @@ class ComponentGameLayout extends Component{
     render(){
         const {isDraw, isGameEnded, field} = this.props;
     return (
-        <div className="container">
-            <button className="btn-restart" onClick={this.handleRestart}>
+        <div className="flex justify-center">
+            <button className="border-1 p-2 bg-blue-700 text-blue-100 rounded-xl m-2" onClick={this.handleRestart}>
                 Заново
             </button>
             <button
-                className="btn-restart btn-color"
+                className="border-1 p-2 bg-amber-600 text-blue-100 rounded-xl m-2"
                 disabled={
                     isDraw ||
                     isGameEnded ||

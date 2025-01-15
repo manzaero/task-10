@@ -1,4 +1,4 @@
-import styles from './info.module.css';
+
 import {Component} from "react";
 import {connect} from "react-redux";
 
@@ -8,13 +8,13 @@ class ComponentInformationLayout extends Component {
 
     render(){
         const {isDraw, isGameEnded, currentPlayer} = this.props;
-        return (<div className="info">
+        return (<div className="">
             {isDraw ? <div className="draw">
-                <p className={styles.p}>Ничья</p>
-            </div> : !isDraw && isGameEnded ? <div className="next-step">
-                <p className={styles.p}>Победа: {`${currentPlayer}`}</p>
-            </div> : !isDraw && !isGameEnded ? <div className="winner">
-                <p className={styles.p}>Ходит: {`${currentPlayer}`}</p>
+                <p className="flex items-center bg-blue-500 text-white text-sm font-bold px-4 py-">Ничья</p>
+            </div> : !isDraw && isGameEnded ? <div className="flex items-center bg-blue-500 text-white text-sm font-bold px-4 py-">
+                <p className="flex items-center bg-blue-500 text-white text-sm font-bold px-4 py-">Победа: {`${currentPlayer}`}</p>
+            </div> : !isDraw && !isGameEnded ? <div className="flex items-center bg-blue-500 text-white text-sm font-bold px-4 py-">
+                <p className="flex items-center bg-blue-500 text-white text-sm font-bold px-4 py-">Ходит: {`${currentPlayer}`}</p>
             </div> : null}
 
 
